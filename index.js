@@ -8,7 +8,8 @@ let userPreference = ('Regular','Sugar-free'); // Possible values: 'Regular', 'S
 console.log(``);
 
 /* Checks the users preference and displays the appropriate message. */
-let preference = userPreference || 'Regular'; // used || operator to default to 'Regular' if preference is undefined.
+// used || operator to default to 'Regular' if preference is undefined.
+let preference = userPreference || 'Regular'; 
 console.log(`The user prefers ${preference} Monster Energy drink.`);
 
 
