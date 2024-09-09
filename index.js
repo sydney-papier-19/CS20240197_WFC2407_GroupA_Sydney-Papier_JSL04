@@ -4,13 +4,15 @@
 // Given a variable that holds a user's preferred type of Monster Energy drink, 
 // print whether the user prefers a "Regular" or "Sugar-free" variety. If the preference is not set, default to "Regular".
 
-let userPreference = ('Regular','Sugar-free'); // Possible values: 'Regular', 'Sugar-free', or undefined
+// Possible values: 'Regular', 'Sugar-free', or undefined
+// used || operator to default to 'Regular' if preference is undefined.
+let userPreference = 'Sugar-free' || 'Regular';
 console.log(``);
 
 /* Checks the users preference and displays the appropriate message. */
-// used || operator to default to 'Regular' if preference is undefined.
-let preference = userPreference || 'Regular'; 
-console.log(`The user prefers ${preference} Monster Energy drink.`);
+
+let preference= userPreference ? userPreference : "Regular";
+console.log(preference);
 
 
 // #### Challenge 2: Stock Check
@@ -31,12 +33,16 @@ console.log(message);
 
 let heartRate = 95; // Current heart rate in bpm
 
+let message3= heartRate < 100? "Boost Needed !" : "Energy levels are high!";
+console.log(message3);
+
 // Determine the message based on the heart rate
-if (heartRate < 100) {
+/*if (heartRate < 100) {
     console.log("Boost needed!");
 } else {
     console.log("Energy levels are high!");
-}
+}*/
+
 
 
 // #### Challenge 4: Temperature Suitability
@@ -47,8 +53,8 @@ if (heartRate < 100) {
 let currentTemp = 4; // Current temperature in °C
 
 // Use a ternary operator to determine the message based on the temperature
-let message = currentTemp <= 5 ? "Chilled to perfection!" : "Needs a cooler!";
-console.log(message);
+let message2 = currentTemp <= 5 ? "Chilled to perfection!" : "Needs a cooler!";
+console.log(message2);
 
 
 // #### Challenge 5: Late Night Coding Session
@@ -65,12 +71,14 @@ console.log(message);
 let currentHour = 22;
 
 // Determine if it's a good idea to have a Monster Energy drink based on the current hour
-if (currentHour >= 7 && currentHour < 24) {
+/*if (currentHour >= 7 && currentHour < 24) {
     console.log("Unleash the beast!");
 } else {
     console.log("Better stick to water.");
-}
+}*/
 
+let message4= currentHour >= 7 && currentHour < 24 ? "Unleash the Beast!" : "Better stick to water";
+console.log(message4);
 
 
 
